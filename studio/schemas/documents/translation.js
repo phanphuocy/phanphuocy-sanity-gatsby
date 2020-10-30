@@ -1,8 +1,8 @@
 import { format } from 'date-fns';
 
 export default {
-  name: 'sampleProject',
-  title: 'Sample project',
+  name: 'translation',
+  title: 'My Translation',
   type: 'document',
   fields: [
     {
@@ -21,6 +21,11 @@ export default {
       }
     },
     {
+      name: 'originalAuthor',
+      title: 'Original Author',
+      type: 'string'
+    },
+    {
       name: 'publishedAt',
       title: 'Published at',
       description: 'You can use this field to schedule projects where you show them',
@@ -30,22 +35,6 @@ export default {
       name: 'excerpt',
       title: 'Excerpt',
       type: 'simplePortableText'
-    },
-    {
-      name: 'members',
-      title: 'Members',
-      type: 'array',
-      of: [{ type: 'projectMember' }]
-    },
-    {
-      name: 'startedAt',
-      title: 'Started at',
-      type: 'datetime'
-    },
-    {
-      name: 'endedAt',
-      title: 'Ended at',
-      type: 'datetime'
     },
     {
       name: 'mainImage',
@@ -64,10 +53,10 @@ export default {
       type: 'projectPortableText'
     },
     {
-      name: 'relatedProjects',
-      title: 'Related projects',
+      name: 'relatedTranslations',
+      title: 'Related Translations',
       type: 'array',
-      of: [{ type: 'reference', to: { type: 'sampleProject' } }]
+      of: [{ type: 'reference', to: { type: 'translation' } }]
     }
   ],
   preview: {

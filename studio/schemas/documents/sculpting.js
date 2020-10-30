@@ -1,8 +1,8 @@
 import { format } from 'date-fns';
 
 export default {
-  name: 'sampleProject',
-  title: 'Sample project',
+  name: 'sculpting',
+  title: 'My Sculpting',
   type: 'document',
   fields: [
     {
@@ -23,19 +23,13 @@ export default {
     {
       name: 'publishedAt',
       title: 'Published at',
-      description: 'You can use this field to schedule projects where you show them',
+      //   description: 'You can use this field to schedule projects where you show them',
       type: 'datetime'
     },
     {
       name: 'excerpt',
       title: 'Excerpt',
       type: 'simplePortableText'
-    },
-    {
-      name: 'members',
-      title: 'Members',
-      type: 'array',
-      of: [{ type: 'projectMember' }]
     },
     {
       name: 'startedAt',
@@ -52,12 +46,12 @@ export default {
       title: 'Main image',
       type: 'figure'
     },
-    {
-      name: 'categories',
-      title: 'Categories',
-      type: 'array',
-      of: [{ type: 'reference', to: { type: 'category' } }]
-    },
+    // {
+    //   name: 'categories',
+    //   title: 'Categories',
+    //   type: 'array',
+    //   of: [{type: 'reference', to: {type: 'category'}}]
+    // },
     {
       name: 'body',
       title: 'Body',

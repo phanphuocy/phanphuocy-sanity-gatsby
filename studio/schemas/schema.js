@@ -1,21 +1,23 @@
 // First, we must import the schema creator
-import createSchema from 'part:@sanity/base/schema-creator'
+import createSchema from 'part:@sanity/base/schema-creator';
 
 // Then import schema types from any plugins that might expose them
-import schemaTypes from 'all:part:@sanity/base/schema-type'
+import schemaTypes from 'all:part:@sanity/base/schema-type';
 
 // Document types
-import category from './documents/category'
-import person from './documents/person'
-import sampleProject from './documents/sampleProject'
-import siteSettings from './documents/siteSettings'
+import category from './documents/category';
+import person from './documents/person';
+import sampleProject from './documents/sampleProject';
+import siteSettings from './documents/siteSettings';
+import sculpting from './documents/sculpting';
+import translation from './documents/translation';
 
 // Object types
-import bioPortableText from './objects/bioPortableText'
-import figure from './objects/figure'
-import projectMember from './objects/projectMember'
-import projectPortableText from './objects/projectPortableText'
-import simplePortableText from './objects/simplePortableText'
+import bioPortableText from './objects/bioPortableText';
+import figure from './objects/figure';
+import projectMember from './objects/projectMember';
+import projectPortableText from './objects/projectPortableText';
+import simplePortableText from './objects/simplePortableText';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -36,6 +38,8 @@ export default createSchema({
     category,
     person,
     sampleProject,
+    sculpting,
+    translation,
     siteSettings
   ])
-})
+});
